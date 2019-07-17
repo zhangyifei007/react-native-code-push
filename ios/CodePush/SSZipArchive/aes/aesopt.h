@@ -45,13 +45,13 @@ Issue Date: 20/12/2007
 
   C subroutine calls:
 
-  AES_RETURN aes_encrypt_key128(const unsigned char *key, aes_encrypt_ctx cx[1]);
+  AES_RETURN cp_yifei_encrypt_key128(const unsigned char *key, aes_encrypt_ctx cx[1]);
   AES_RETURN aes_encrypt_key192(const unsigned char *key, aes_encrypt_ctx cx[1]);
   AES_RETURN aes_encrypt_key256(const unsigned char *key, aes_encrypt_ctx cx[1]);
   AES_RETURN aes_encrypt(const unsigned char *in, unsigned char *out,
                                                   const aes_encrypt_ctx cx[1]);
 
-  AES_RETURN aes_decrypt_key128(const unsigned char *key, aes_decrypt_ctx cx[1]);
+  AES_RETURN cp_yifei_decrypt_key128(const unsigned char *key, aes_decrypt_ctx cx[1]);
   AES_RETURN aes_decrypt_key192(const unsigned char *key, aes_decrypt_ctx cx[1]);
   AES_RETURN aes_decrypt_key256(const unsigned char *key, aes_decrypt_ctx cx[1]);
   AES_RETURN aes_decrypt(const unsigned char *in, unsigned char *out,
