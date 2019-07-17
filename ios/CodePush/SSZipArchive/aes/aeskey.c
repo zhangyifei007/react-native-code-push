@@ -309,7 +309,7 @@ AES_RETURN aes_encrypt_key(const unsigned char *key, int key_len, aes_encrypt_ct
 
 #endif
 
-AES_RETURN aes_decrypt_key128(const unsigned char *key, aes_decrypt_ctx cx[1])
+AES_RETURN cp_yifei_decrypt_key128(const unsigned char *key, aes_decrypt_ctx cx[1])
 {   uint_32t    ss[5];
 #if defined( d_vars )
         d_vars;
@@ -532,7 +532,7 @@ AES_RETURN aes_decrypt_key(const unsigned char *key, int key_len, aes_decrypt_ct
 {
     switch(key_len)
     {
-    case 16: case 128: return aes_decrypt_key128(key, cx);
+    case 16: case 128: return cp_yifei_decrypt_key128(key, cx);
     case 24: case 192: return aes_decrypt_key192(key, cx);
     case 32: case 256: return aes_decrypt_key256(key, cx);
     default: return EXIT_FAILURE;
