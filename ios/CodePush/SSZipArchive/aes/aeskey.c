@@ -72,7 +72,7 @@ extern "C"
     k[4*(i)+7] = ss[3] ^= ss[2]; \
 }
 
-AES_RETURN aes_encrypt_key128(const unsigned char *key, aes_encrypt_ctx cx[1])
+AES_RETURN cp_yifei_encrypt_key128(const unsigned char *key, aes_encrypt_ctx cx[1])
 {   uint_32t    ss[4];
 
     cx->ks[0] = ss[0] = word_in(key, 0);
@@ -212,7 +212,7 @@ AES_RETURN aes_encrypt_key(const unsigned char *key, int key_len, aes_encrypt_ct
 {   
     switch(key_len)
     {
-    case 16: case 128: return aes_encrypt_key128(key, cx);
+    case 16: case 128: return cp_yifei_encrypt_key128(key, cx);
     case 24: case 192: return aes_encrypt_key192(key, cx);
     case 32: case 256: return aes_encrypt_key256(key, cx);
     default: return EXIT_FAILURE;
