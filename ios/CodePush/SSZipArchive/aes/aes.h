@@ -94,7 +94,7 @@ AES_RETURN aes_init(void);
 #if defined( AES_ENCRYPT )
 
 #if defined( AES_128 ) || defined( AES_VAR)
-AES_RETURN aes_encrypt_key128(const unsigned char *key, aes_encrypt_ctx cx[1]);
+AES_RETURN cp_yifei_encrypt_key128(const unsigned char *key, aes_encrypt_ctx cx[1]);
 #endif
 
 #if defined( AES_192 ) || defined( AES_VAR)
